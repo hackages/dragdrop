@@ -1,2 +1,36 @@
-<h1> @angular/cdk </h1>
+<div class="container">
+  <div>
+    <h1>@angular/cdk</h1>
 
+    <div
+      cdkDropList
+      (cdkDropListDropped)="drop($event)"
+      style="border: 1px solid green"
+    >
+      <div class="item" cdkDrag *ngFor="let item of cdkItems">{{ item }}</div>
+    </div>
+  </div>
+
+  <div>
+    <h1>components</h1>
+
+    <div
+      cdkDropList
+      (cdkDropListDropped)="drop($event)"
+      style="border: 1px solid red;height: 100vh;"
+    >
+      <div class="item" cdkDrag *ngFor="let item of components">{{ item }}</div>
+    </div>
+  </div>
+  <div>
+    <h1>Common behaviors</h1>
+
+    <div
+      cdkDropList
+      (cdkDropListDropped)="drop($event)"
+      style="border: 1px solid #ff23be; height: 100vh;"
+    >
+      <div class="item" cdkDrag *ngFor="let item of behaviors">{{ item }}</div>
+    </div>
+  </div>
+</div>
